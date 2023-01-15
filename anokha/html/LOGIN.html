@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+   <title>Login</title>
+   <link rel="icon" type="image/x-icon" href="../images/fevi.png">
+    <link rel="stylesheet" href="../css/style2.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+   <script>
+      function success(){
+        var name = document.forms.LOGIN.uname.value;
+        var password = document.forms.LOGIN.pass.value;
+        if(name==""){
+          alert("Please fill an appropriate username");
+          return false;
+        }
+        if(password==""){
+          alert("Pleae fill correct password");
+          return false;
+        }
+        alert("Succesfull Login!");
+        return window.open("../index.html");
+      }
+   </script>
+   </head>
+<body>
+  
+  <header style="margin-left: 900px; "> 
+    <div class="main">
+      <img src="../images/am.jpg" alt="LOGO">
+    <div class="logo">
+        <ul>
+            <li><a style="color: black;" href="../index.html">HOME</a></li>
+            <li ><a style="color: black;" href="registration.html">REGISTRATION</a></li>
+            <li class="active"><a style="color: black;" href="#">LOGIN</a></li>
+        </Ul>
+    </div>
+    </div>
+  </header>
+<br><br><br><br>
+
+  <div class="main_div">
+    <div class="title">Login Form</div>
+    <form name="LOGIN" method="post">
+      <div class="input_box">
+        <input type="text" placeholder="Email or Phone" name="uname">
+        <div class="icon"><i class="fas fa-user"></i></div>
+      </div>
+      <div class="input_box">
+        <input type="password" placeholder="Password" name="pass">
+        <div class="icon"><i class="fas fa-lock"></i></div>
+      </div>
+      <div class="option_div">
+        <div class="check_box">
+          <input type="checkbox">
+          <span>Remember me</span>
+        </div>
+        <div class="forget_div">
+          <a href="#">Forgot password?</a>
+        </div>
+      </div>
+      <div class="input_box button">
+        <input type="submit" value="Login" onclick="return success()">
+      </div>
+      <div class="sign_up">
+        Not a member? <a href="registration.html">Register Now</a>
+      </div><br>
+     
+    </form>
+  </div>
+
+
+<footer style="text-align: center;">
+  Copyright © 2022 - 2023 - G. Kushal Bhavani Reddy, II B.Tech CSE (CYS)<br>
+  ANOKHA TECH FEST<br>
+Part of 20CYS202 - User Interface Design<br>
+Amrita Vishwa Vidyapeetham, Coimbatore<br> .
+</footer>
+
+</body>
+</html>
